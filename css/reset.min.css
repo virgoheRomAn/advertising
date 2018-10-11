@@ -1,0 +1,190 @@
+/*!
+ * APP 1.0.0 beta
+ *
+ * @作者: 中恒玖联前端团队
+ * @版权: 中恒玖联
+ *
+ * (借鉴于网易NEC)
+ */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-size: 62.5%
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1.6rem
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+    display: block
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption, th {
+    text-align: left;
+    font-weight: normal
+}
+
+html, body, fieldset, img, iframe, abbr {
+    border: 0
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal
+}
+
+[hidefocus], summary {
+    outline: 0
+}
+
+li {
+    list-style: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+q:before, q:after {
+    content: none
+}
+
+textarea {
+    overflow: auto;
+    resize: none
+}
+
+label, summary {
+    cursor: default
+}
+
+a, button {
+    cursor: pointer
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: normal
+}
+
+del, ins, u, s, a, a:hover {
+    text-decoration: none
+}
+
+body, textarea, input, button, select, keygen, legend {
+    color: #000;
+    outline: 0;
+    font-family: arial, sans-serif, "Microsoft YaHei"
+}
+
+body {
+    background: #fff;
+    font-size: 1.6rem;
+    line-height: 1.6
+}
+
+a, a:hover {
+    color: #000
+}
+
+a:active, button:active, input[type='button']:active, input[type='reset']:active, input[type='submit']:active {
+    opacity: .8
+}
+
+.f-cb:after, .f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: "."
+}
+
+.f-cb, .f-cbli li {
+    zoom: 1
+}
+
+.f-ib {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.f-dn {
+    display: none
+}
+
+.f-db {
+    display: block
+}
+
+.f-fl {
+    float: left
+}
+
+.f-fr {
+    float: right
+}
+
+.f-pr {
+    position: relative
+}
+
+.f-prz {
+    position: relative;
+    zoom: 1
+}
+
+.f-oh {
+    overflow: hidden
+}
+
+.f-tal {
+    text-align: left
+}
+
+.f-tac {
+    text-align: center
+}
+
+.f-tar {
+    text-align: right
+}
+
+.f-taj {
+    text-align: justify;
+    text-justify: inter-ideograph
+}
+
+.f-ti2 {
+    text-indent: 2rem
+}
+
+.f-toe {
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}

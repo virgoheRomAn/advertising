@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta charset="UTF-8">
+    <title>操作页面</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.custom.css"/>
+    <link rel="stylesheet" href="css/colpick.css"/>
+    <link rel="stylesheet" href="css/zyupload-1.0.0.css"/>
+    <link rel="stylesheet" href="css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="header">
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+
+        <div class="header-box">
+            <!--<div class="header-module"><i></i><span>自由模式</span></div>-->
+            <!--<div class="header-menu">-->
+            <!--<ul class="clearfix">-->
+            <!--<li><a id="textEditor" href="#"><i class="glyphicon glyphicon-edit"></i><span>文本编辑</span></a></li>-->
+            <!--<li><a id="imgEditor" href="#"><i class="glyphicon glyphicon-picture"></i><span>图片编辑</span></a></li>-->
+            <!--<li><a id="videoEditor" href="#"><i class="glyphicon glyphicon-film"></i><span>视频编辑</span></a></li>-->
+            <!--<li><a id="shapeEditor" href="#"><i class="glyphicon glyphicon-certificate"></i><span>形状元素</span></a></li>-->
+            <!--<li><a id="linkEditor" href="#"><i class="glyphicon glyphicon-link"></i><span>按钮链接</span></a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <div class="header-handle">
+            <div class="header-music" id="music">
+                <i class="fa fa-music"></i><span>背景音乐</span>
+            </div>
+            <div class="header-btn repeal-btn"><i class="fa fa-reply"></i>撤销</div>
+            <div id="previewHtmlBtn" class="header-btn preview-btn"><i class="fa fa-video-camera"></i>预览</div>
+            <div id="saveDataBtn" class="header-btn save-btn"><i class="fa fa-repeat"></i>保存</div>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="content-left">
+            <!--操作菜单-->
+            <div class="content-menu">
+                <div class="header-menu">
+                    <ul class="clearfix">
+                        <li><a id="textEditor" href="#"><i class="glyphicon glyphicon-edit"></i><span>文本编辑</span></a>
+                        </li>
+                        <li><a id="imgEditor" href="#"><i class="glyphicon glyphicon-picture"></i><span>图片编辑</span></a>
+                        </li>
+                        <li><a id="videoEditor" href="#"><i class="glyphicon glyphicon-film"></i><span>视频编辑</span></a>
+                        </li>
+                        <li><a id="shapeEditor" href="#"><i
+                                class="glyphicon glyphicon-certificate"></i><span>形状元素</span></a></li>
+                        <li><a id="linkEditor" href="#"><i class="glyphicon glyphicon-link"></i><span>按钮链接</span></a>
+                        </li>
+                    </ul>
+
+                    <!--常用菜单-->
+                    <div class="common-menu">
+                        <ul class="clearfix">
+                            <li>
+                                <a class="has-text" href="javascript:;"><i class="fa fa-tablet"></i>APP</a>
+
+                                <div class="phone-box menu-po">
+                                    <h2>扫描二维码，下载APP</h2>
+                                    <span><img src="img/twoCode.png"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="has-text" href="javascript:;"><i class="fa fa-weixin"></i>微信</a>
+
+                                <div class="wechat-box menu-po">
+                                    <h2><span>关注微信公众号：贵阳提联网</span></h2>
+                                    <span><img src="img/twoCode.png"></span>
+                                </div>
+                            </li>
+                            <li><a class="has-text" href="#"><i class="fa fa-question-circle"></i>帮助</a></li>
+                            <li><a class="has-text" href="#"><i class="fa fa-comments"></i>反馈</a></li>
+                        </ul>
+                        <p class="common-intro">版权所有 贵阳梯联网科技有限公司，违者追究其法律责任。</p>
+                    </div>
+                </div>
+            </div>
+            <!--模板-->
+            <a class="template-btn" href="javascript:;">模板菜单<i class="ace-icon fa fa-angle-double-right"></i></a>
+
+            <div class="template-list" style="display: block;">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#normal" aria-controls="normal" role="tab"
+                                                              data-toggle="tab">普通模板</a></li>
+                    <li role="presentation"><a href="#statistics" aria-controls="statistics" role="tab"
+                                               data-toggle="tab">统计模板</a></li>
+                    <li role="presentation"><a href="#effects" aria-controls="effects" role="tab"
+                                               data-toggle="tab">特效模板</a></li>
+                    <li role="presentation"><a href="#mine" aria-controls="mine" role="tab" data-toggle="tab">我的模板</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="normal">
+                        <div class="template-menu clearfix">
+                            <span class="active">全部</span>
+                            <span>图文</span>
+                            <span>封面</span>
+                            <span>滑块</span>
+                            <span>表单</span>
+
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="allTemplate"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="allTemplate">
+                                    <span>分类1</span>
+                                    <span>分类2</span>
+                                    <span>分类3</span>
+                                    <span>分类4</span>
+                                    <span>分类5</span>
+                                    <span>分类6</span>
+                                    <span>分类7</span>
+                                    <span>分类8</span>
+                                    <span>分类9</span>
+                                    <span>分类10</span>
+                                    <span>分类11</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="templat-imgs clearfix">
+                            <li><img src="img/temp1.png"></li>
+                            <li><img src="img/temp2.png"></li>
+                            <li><img src="img/temp3.png"></li>
+                            <li><img src="img/temp4.png"></li>
+                            <li><img src="img/temp5.png"></li>
+                            <li><img src="img/temp6.png"></li>
+                            <li><img src="img/temp7.png"></li>
+                            <li><img src="img/temp8.png"></li>
+                            <li><img src="img/temp9.png"></li>
+                            <li><img src="img/temp10.png"></li>
+                            <li><img src="img/temp11.png"></li>
+                            <li><img src="img/temp12.png"></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="statistics">
+                        <div class="template-menu clearfix">
+                            <span class="active">全部</span>
+                            <span>图表</span>
+                            <span>线形</span>
+                            <span>饼形</span>
+                            <span>柱状</span>
+                        </div>
+
+                        <ul class="templat-imgs clearfix">
+                            <li><img src="img/temp4.png"></li>
+                            <li><img src="img/temp5.png"></li>
+                            <li><img src="img/temp6.png"></li>
+                            <li><img src="img/temp7.png"></li>
+                            <li><img src="img/temp8.png"></li>
+                            <li><img src="img/temp9.png"></li>
+                            <li><img src="img/temp10.png"></li>
+                            <li><img src="img/temp11.png"></li>
+                            <li><img src="img/temp12.png"></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="effects">
+                        <div class="template-menu clearfix">
+                            <span class="active">全部</span>
+                        </div>
+
+                        <ul class="templat-imgs clearfix">
+                            <li><img src="img/temp9.png"></li>
+                            <li><img src="img/temp10.png"></li>
+                            <li><img src="img/temp11.png"></li>
+                            <li><img src="img/temp12.png"></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="mine">
+                        <div class="mineTemp-text">在编辑页面中点击"生成模板"，即可生成自己的模板。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-mid">
+            <div class="app-content-box">
+                <div class="app-content-bg">
+                    <div class="app-jc-cont">
+                        <!--<img src="img/bg2.jpg">-->
+                    </div>
+                </div>
+
+                <div class="preview-box">
+                    <div class="preview-app">
+                        <div class="preview-cont"></div>
+                    </div>
+
+                    <!--鼠标右键-->
+                    <div class="preview-mouse-nav">
+                        <ul>
+                            <li>上移一层</li>
+                            <li>下移一层</li>
+                            <li>移至顶层</li>
+                            <li>移至底层</li>
+                            <li>删除</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+            <!--背景-->
+            <div class="content-right-bg">
+                <ul class="content-right-header clearfix">
+                    <li class="full-tab"><span>背景主题</span></li>
+                </ul>
+                <div class="content-right-cont">
+                    <div class="content-right-row">
+                        <div class="bg-btn clearfix">
+                            <a id="changeBg" class="change-bg" href="javascript:;">更换背景</a>
+                            <a id="removeBg" class="remove-bg" href="javascript:;">移除</a>
+                        </div>
+                        <div id="jcImg" class="bg-cont">
+                            <!--<img id="jcrop_target" src="img/bg2.jpg">-->
+                        </div>
+                    </div>
+                    <div class="content-right-row theme-module">
+                        <div class="theme-type">
+                            <span class="theme-title">主题颜色</span>
+
+                            <div class="theme-color">
+                                <label class="color1" data-color="transparent"></label>
+                                <label class="color2" data-color="#3C495F"></label>
+                                <label class="color3" data-color="#FF6C6C"></label>
+                                <label class="color4" data-color="#FBC600"></label>
+                                <label class="color5" data-color="#90D356"></label>
+                                <label class="color6" data-color="#2B90ED"></label>
+                                <label class="color7" data-color="#6E5993"></label>
+                                <label id="bgColor" class="color8"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-row">
+                        <div class="opacity-module">
+                            <span class="opacity-title">透明</span>
+
+                            <div class="opacity-slider">
+                                <span id="opacityControl"
+                                      class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                <input class="opacity-text" type="text" value="0%">
+                                <input class="hidden" type="text" data-min="0" data-max="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-row">
+                        <a class="create-template" href="javascript:;">生成模板</a>
+                    </div>
+                </div>
+            </div>
+            <!--图像-->
+            <div class="content-right-menu">
+                <ul class="content-right-header clearfix">
+                    <li class="half-tab active"><a href="#">属性</a></li>
+                    <li class="half-tab"><a href="#">动作</a></li>
+                </ul>
+                <div class="content-right-p-right">
+                    <div class="content-right-cont content-right-property active">
+                        <div class="isImage">
+                            <div class="content-right-row">
+                                <div class="bg-btn clearfix">
+                                    <a id="changeImg" class="change-bg" href="javascript:;">更换图片</a>
+                                    <!--<a id="tailorImg" class="remove-bg" href="javascript:;">裁剪</a>-->
+                                </div>
+                            </div>
+                            <div class="content-right-row">
+                                <div class="opacity-module margin-b10">
+                                    <span class="opacity-title">透明</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="opacityControl2"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0%">
+                                        <input class="hidden" type="text" data-min="0" data-max="100">
+                                    </div>
+                                </div>
+                                <div class="opacity-module margin-b10">
+                                    <span class="opacity-title">圆角</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="radiusControl"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0%">
+                                        <input class="hidden" type="text" data-min="0" data-max="100">
+                                    </div>
+                                </div>
+                                <div class="opacity-module margin-b10">
+                                    <span class="opacity-title">阴影</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="shadowControl"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0px">
+                                        <input class="hidden" type="text" data-min="0" data-max="100">
+                                    </div>
+                                </div>
+                                <div class="opacity-module">
+                                    <span class="opacity-title">旋转</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="rotateControl"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0deg">
+                                        <input class="hidden" type="text" data-min="0" data-max="360">
+                                    </div>
+                                </div>
+
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <p class="ele-property clearfix">
+                                    <span>大小</span>
+                                    <label><i>宽度：</i><input id="eleWidth" type="text" value="0"></label>
+                                    <label><i>高度：</i><input id="eleHeight" type="text" value="0"></label>
+                                </p>
+
+                                <p class="ele-property clearfix">
+                                    <span>位置</span>
+                                    <label><i>Top：</i><input id="eleTop" type="text" value="0"></label>
+                                    <label><i>Left：</i><input id="eleLeft" type="text" value="0"></label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="isText" style="display: none">
+                            <div class="content-right-row">
+                                <div class="write-text">
+                                    <span class="text-tips">输入文本</span>
+                                    <textarea id="nameText" cols="" rows="" placeholder="请输入文本"></textarea>
+                                </div>
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <div class="text-property">
+                                    <span class="text-tips">文字属性</span>
+
+                                    <div class="clearfix">
+                                        <i id="textColor" class="check-textColor"></i>
+
+                                        <div class="text-size-line">
+                                            <div class="btn-group">
+                                                <button id="textSize" type="button"
+                                                        class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    40px
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu textSizeMenu">
+                                                    <li>20px</li>
+                                                    <li>24px</li>
+                                                    <li>26px</li>
+                                                    <li>28px</li>
+                                                    <li>30px</li>
+                                                    <li>32px</li>
+                                                    <li>34px</li>
+                                                    <li>36px</li>
+                                                    <li>38px</li>
+                                                    <li>40px</li>
+                                                    <li>44px</li>
+                                                    <li>46px</li>
+                                                    <li>50px</li>
+                                                    <li>60px</li>
+                                                    <li>72px</li>
+                                                    <li>90px</li>
+                                                    <li>100px</li>
+                                                    <li>120px</li>
+                                                    <li>200px</li>
+                                                    <li>300px</li>
+                                                    <li>350px</li>
+                                                    <li>400px</li>
+                                                    <li>500px</li>
+                                                    <li>550px</li>
+                                                    <li>600px</li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button id="textLineHeight" type="button"
+                                                        class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    1.5倍
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu textLineMenu dropdown-menu-right">
+                                                    <li>1.0倍</li>
+                                                    <li>1.2倍</li>
+                                                    <li>1.3倍</li>
+                                                    <li>1.5倍</li>
+                                                    <li>2.0倍</li>
+                                                    <li>2.5倍</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <div class="selectStyle clearfix">
+                                    <a class="textType" href="javascript:;"><i class="fa fa-bold"
+                                                                               aria-hidden="true"></i></a>
+                                    <a class="textType" href="javascript:;"><i class="fa fa-italic"
+                                                                               aria-hidden="true"></i></a>
+                                    <a class="textType" href="javascript:;"><i class="fa fa-underline"
+                                                                               aria-hidden="true"></i></a>
+                                    <a class="textAlign" href="javascript:;"><i class="fa fa-align-left"
+                                                                                aria-hidden="true"></i></a>
+                                    <a class="textAlign" href="javascript:;"><i class="fa fa-align-center"
+                                                                                aria-hidden="true"></i></a>
+                                    <a class="textAlign" href="javascript:;"><i class="fa fa-align-right"
+                                                                                aria-hidden="true"></i></a>
+                                </div>
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <div class="opacity-module margin-b10">
+                                    <span class="opacity-title">透明</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="opacityControl3"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0%">
+                                        <input class="hidden" type="text" data-min="0" data-max="100">
+                                    </div>
+                                </div>
+                                <div class="opacity-module">
+                                    <span class="opacity-title">旋转</span>
+
+                                    <div class="opacity-slider">
+                                        <span id="rotateControl2"
+                                              class="opacity-control ui-slider-green ui-slider-small">0</span>
+                                        <input class="opacity-text" type="text" value="0deg">
+                                        <input class="hidden" type="text" data-min="0" data-max="360">
+                                    </div>
+                                </div>
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <p class="ele-property clearfix">
+                                    <span>大小</span>
+                                    <label><i>宽度：</i><input id="eleWidth2" type="text" value="0"></label>
+                                    <label><i>高度：</i><input id="eleHeight2" type="text" value="0"></label>
+                                </p>
+
+                                <p class="ele-property clearfix">
+                                    <span>位置</span>
+                                    <label><i>Top：</i><input id="eleTop2" type="text" value="0"></label>
+                                    <label><i>Left：</i><input id="eleLeft2" type="text" value="0"></label>
+                                </p>
+
+                                <div class="right-line"></div>
+                            </div>
+                            <div class="content-right-row">
+                                <div class="sliderBtn"><a href="javascript:;">开启跑马灯</a></div>
+                                <div class="marquee-setting">
+                                    <label class="marquee-type"><input type="radio" name="loop" checked>循环滚动</label>
+                                    <label class="marquee-type"><input type="radio" name="loop">单次滚动</label>
+
+                                    <div class="opacity-module margin-t10">
+                                        <span class="opacity-title">速率</span>
+
+                                        <div class="opacity-slider">
+                                            <span id="textMarquee"
+                                                  class="opacity-control ui-slider-green ui-slider-small"></span>
+                                            <input class="opacity-text" type="text" value="10s">
+                                            <input class="hidden" type="text" data-min="0" data-max="50">
+                                        </div>
+                                    </div>
+                                    <p style="margin: 10px 0 0 0; color: #878787; font-size: 12px;">
+                                        提示：文字较少，建议不开启跑马灯。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="isVideo" style="display: none;">
+                            <div class="content-right-row">
+                                <div class="text-property bg-btn">
+                                    <span class="text-tips">视频操作：flash不能停止，需要AS</span>
+                                    <a id="playVideo" class="change-bg" style="width: 60px;" href="javascript:;">播放</a>
+                                    <a id="pauseVideo" class="remove-bg" href="javascript:;">暂停</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-cont content-right-animate">
+                        <p>总时长：<span id="sumTimes">120s</span></p>
+
+                        <div class="content-right-row">
+                            <h2 class="animate-tips">属性</h2>
+
+                            <div class="opacity-module margin-b10">
+                                <span class="opacity-title">速度</span>
+
+                                <div class="opacity-slider">
+                                    <span id="speedControl"
+                                          class="opacity-control ui-slider-green ui-slider-small">1</span>
+                                    <input class="opacity-text" type="text" value="1s">
+                                    <input class="hidden" type="text" data-min="0" data-max="100">
+                                </div>
+                            </div>
+                            <div class="opacity-module">
+                                <span class="opacity-title">延迟</span>
+
+                                <div class="opacity-slider">
+                                    <span id="delayControl"
+                                          class="opacity-control ui-slider-green ui-slider-small">0.6</span>
+                                    <input class="opacity-text" type="text" value="0.6s">
+                                    <input class="hidden" type="text" data-min="0" data-max="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-right-row">
+                            <h2 class="animate-tips">效果</h2>
+
+                            <div id="selectAnimate" class="animate-icons">
+                                <ul class="clearfix">
+                                    <li data-animate="noAnimate">
+                                        <span class="an-icon icon1"></span>
+                                        <label>无效果</label>
+                                    </li>
+                                    <li data-animate="fadeIn">
+                                        <span class="an-icon icon2 active"></span>
+                                        <label>淡入</label>
+                                    </li>
+                                    <li data-animate="rotateInDownLeft">
+                                        <span class="an-icon icon3"></span>
+                                        <label>从左滚入</label>
+                                    </li>
+                                    <li data-animate="rotateInDownRight">
+                                        <span class="an-icon icon4"></span>
+                                        <label>从右滚入</label>
+                                    </li>
+                                    <li data-animate="zoomIn">
+                                        <span class="an-icon icon5"></span>
+                                        <label>放大</label>
+                                    </li>
+                                    <li data-animate="zoomInDown">
+                                        <span class="an-icon icon6"></span>
+                                        <label>下落放大</label>
+                                    </li>
+                                    <li data-animate="scaleInBig">
+                                        <span class="an-icon icon7"></span>
+                                        <label>弹性放大</label>
+                                    </li>
+                                    <li data-animate="scaleInSmall">
+                                        <span class="an-icon icon8"></span>
+                                        <label>弹性缩小</label>
+                                    </li>
+                                    <li data-animate="fadeInLeft">
+                                        <span class="an-icon icon9"></span>
+                                        <label>向右飞入</label>
+                                    </li>
+                                    <li data-animate="fadeInRight">
+                                        <span class="an-icon icon10"></span>
+                                        <label>向左飞入</label>
+                                    </li>
+                                    <li data-animate="fadeInUp">
+                                        <span class="an-icon icon11"></span>
+                                        <label>向上飞入</label>
+                                    </li>
+                                    <li data-animate="fadeInDown">
+                                        <span class="an-icon icon12"></span>
+                                        <label>向下飞入</label>
+                                    </li>
+                                    <li data-animate="rotateIn">
+                                        <span class="an-icon icon13"></span>
+                                        <label>旋转出现</label>
+                                    </li>
+                                    <li data-animate="flipInY">
+                                        <span class="an-icon icon14"></span>
+                                        <label>左右翻转</label>
+                                    </li>
+                                    <li data-animate="flipInX">
+                                        <span class="an-icon icon15"></span>
+                                        <label>上下翻转</label>
+                                    </li>
+                                    <li data-animate="lightSpeedIn">
+                                        <span class="an-icon icon16"></span>
+                                        <label>刹车</label>
+                                    </li>
+                                    <li data-animate="slideRight">
+                                        <span class="an-icon icon17"></span>
+                                        <label>向右滑入</label>
+                                    </li>
+                                    <li data-animate="slideLeft">
+                                        <span class="an-icon icon18"></span>
+                                        <label>向左滑入</label>
+                                    </li>
+                                    <li data-animate="slideUp">
+                                        <span class="an-icon icon19"></span>
+                                        <label>向上滑入</label>
+                                    </li>
+                                    <li data-animate="slideDown">
+                                        <span class="an-icon icon20"></span>
+                                        <label>向下滑入</label>
+                                    </li>
+                                    <li data-animate="stretchRight">
+                                        <span class="an-icon icon21"></span>
+                                        <label>向右展开</label>
+                                    </li>
+                                    <li data-animate="stretchLeft">
+                                        <span class="an-icon icon22"></span>
+                                        <label>向左展开</label>
+                                    </li>
+                                    <li data-animate="stretchUp">
+                                        <span class="an-icon icon23"></span>
+                                        <label>向上展开</label>
+                                    </li>
+                                    <li data-animate="stretchDown">
+                                        <span class="an-icon icon24"></span>
+                                        <label>向下展开</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="imgModal" class="modal fade images-module">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs" id="select_img">
+                        <li class="active"><a data-toggle="tab" href="#material_img" aria-expanded="true">素材图片</a></li>
+                        <li><a data-toggle="tab" href="#upload_img" aria-expanded="false">上传图片</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="material_img" class="tab-pane active">
+                            <!--本地图片-->
+                            <div class="material-img clearfix">
+                                <ul class="material-menu">
+                                    <li data-infor="1" class="active">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                    <li data-infor="0">背景</li>
+                                </ul>
+
+                                <div class="material-tab">
+                                    <div class="material-cont active">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/bg.jpg"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/bg2.jpg"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp5.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp4.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img4.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/tips-bg.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/bg.jpg"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/bg2.jpg"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp5.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/temp4.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img4.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/tips-bg.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="material-cont">
+                                        <ul class="clearfix">
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img1.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img2.png"
+                                                                            src="img/loading.gif"></a></li>
+                                            <li><a href="javascript:;"><img class="lazy" data-original="img/lc_img3.png"
+                                                                            src="img/loading.gif"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="upload_img" class="tab-pane">
+                            <h2 class="location-title">亲，本地上传图片都在这里哦！</h2>
+
+                            <div class="upload-img">
+                                <div id="zyupload" class="zyupload"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="ensureBtn" type="button" class="btn btn-primary">确认使用</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="musicModal" class="modal fade music-module">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close-btn close" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="music-title"><span>选择背景音乐</span></h2>
+
+                <div class="upload-music">
+                    <form id="uploadMusicForm" action="uploadHtml.html" method="post" enctype="multipart/form-data">
+                        <a id="uploadMusic" href="javascript:;">+上传音乐</a>
+                        <input id="uploadMusicInput" type="file"/>
+                    </form>
+                </div>
+                <div class="music-box">
+                    <p>本地音乐文件</p>
+                    <ul class="clearfix">
+                        <li class="">
+                            <a href="javascript:;">
+                                无背景音乐
+                                <i class="fa fa-ban" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;">
+                                背景音乐1
+                                <audio class="audio">
+                                    <source src="audio/audio1.mp3" type="audio/mpeg">
+                                </audio>
+                                <i class="fa fa-volume-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                背景音乐2
+                                <audio class="audio">
+                                    <source src="audio/audio2.mp3" type="audio/mpeg">
+                                </audio>
+                                <i class="fa fa-volume-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                背景音乐3
+                                <audio class="audio">
+                                    <source src="audio/audio3.mp3" type="audio/mpeg">
+                                </audio>
+                                <i class="fa fa-volume-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="close-btn btn btn-default">关闭</button>
+                <button id="musicSure" type="button" class="btn btn-primary">确认使用</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="videoModal" class="modal fade music-module">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close-btn close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h2 class="music-title"><span>选择视频文件</span></h2>
+
+                <div class="upload-music">
+                    <form id="uploadVideoForm" action="uploadHtml.html" method="post" enctype="multipart/form-data">
+                        <a id="uploadVideo" href="javascript:;">+上传视频</a>
+                        <input id="uploadVideoInput" type="file"/>
+                    </form>
+                </div>
+                <div class="video-box">
+                    <p>本地视频文件</p>
+                    <ul class="clearfix">
+                        <li class="active">
+                            <a href="javascript:;">
+                                <img class="lazy" data-type="mp4" data-original="img/upload-img/fileType/mp4.png"
+                                     src="img/loading.gif">
+                                <span class="video-name">视频文件名称.mp4</span>
+                                <input class="hidden" type="hidden" value="video/mp4.mp4">
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;">
+                                <img class="lazy" data-type="mp4" data-original="img/upload-img/fileType/mp4.png"
+                                     src="img/loading.gif">
+                                <span class="video-name">视频文件名称-1.mp4</span>
+                                <input class="hidden" type="hidden" value="video/mp4-1.mp4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img class="lazy" data-type="swf" data-original="img/upload-img/fileType/file.png"
+                                     src="img/loading.gif">
+                                <span class="video-name">没有.swf的图标.swf</span>
+                                <input class="hidden" type="hidden" value="video/swf.swf">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="videoSure" type="button" class="btn btn-primary">确认使用</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/zyupload-1.0.0.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/jquery.Jcrop.min.js"></script>
+<script src="js/jquery.colpick.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/perfect-scrollbar.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
